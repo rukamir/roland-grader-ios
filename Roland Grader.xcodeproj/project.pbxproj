@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF04E7FF1CD2FEE300757767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E7FE1CD2FEE300757767 /* AppDelegate.swift */; };
+		BF04E8011CD2FEE300757767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E8001CD2FEE300757767 /* ViewController.swift */; };
+		BF04E8041CD2FEE300757767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF04E8021CD2FEE300757767 /* Main.storyboard */; };
+		BF04E8061CD2FEE300757767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF04E8051CD2FEE300757767 /* Assets.xcassets */; };
+		BF04E8091CD2FEE300757767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF04E8071CD2FEE300757767 /* LaunchScreen.storyboard */; };
+		BF04E8141CD2FEE300757767 /* Roland_GraderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E8131CD2FEE300757767 /* Roland_GraderTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF04E8101CD2FEE300757767 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF04E7F31CD2FEE300757767 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF04E7FA1CD2FEE300757767;
+			remoteInfo = "Roland Grader";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF04E7FB1CD2FEE300757767 /* Roland Grader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roland Grader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF04E7FE1CD2FEE300757767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF04E8001CD2FEE300757767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF04E8031CD2FEE300757767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF04E8051CD2FEE300757767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF04E8081CD2FEE300757767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF04E80A1CD2FEE300757767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF04E80F1CD2FEE300757767 /* Roland GraderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Roland GraderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF04E8131CD2FEE300757767 /* Roland_GraderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roland_GraderTests.swift; sourceTree = "<group>"; };
+		BF04E8151CD2FEE300757767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF04E7F81CD2FEE300757767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF04E80C1CD2FEE300757767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF04E7F21CD2FEE300757767 = {
+			isa = PBXGroup;
+			children = (
+				BF04E7FD1CD2FEE300757767 /* Roland Grader */,
+				BF04E8121CD2FEE300757767 /* Roland GraderTests */,
+				BF04E7FC1CD2FEE300757767 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF04E7FC1CD2FEE300757767 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF04E7FB1CD2FEE300757767 /* Roland Grader.app */,
+				BF04E80F1CD2FEE300757767 /* Roland GraderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF04E7FD1CD2FEE300757767 /* Roland Grader */ = {
+			isa = PBXGroup;
+			children = (
+				BF04E7FE1CD2FEE300757767 /* AppDelegate.swift */,
+				BF04E8001CD2FEE300757767 /* ViewController.swift */,
+				BF04E8021CD2FEE300757767 /* Main.storyboard */,
+				BF04E8051CD2FEE300757767 /* Assets.xcassets */,
+				BF04E8071CD2FEE300757767 /* LaunchScreen.storyboard */,
+				BF04E80A1CD2FEE300757767 /* Info.plist */,
+			);
+			path = "Roland Grader";
+			sourceTree = "<group>";
+		};
+		BF04E8121CD2FEE300757767 /* Roland GraderTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF04E8131CD2FEE300757767 /* Roland_GraderTests.swift */,
+				BF04E8151CD2FEE300757767 /* Info.plist */,
+			);
+			path = "Roland GraderTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF04E7FA1CD2FEE300757767 /* Roland Grader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF04E8181CD2FEE300757767 /* Build configuration list for PBXNativeTarget "Roland Grader" */;
+			buildPhases = (
+				BF04E7F71CD2FEE300757767 /* Sources */,
+				BF04E7F81CD2FEE300757767 /* Frameworks */,
+				BF04E7F91CD2FEE300757767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Roland Grader";
+			productName = "Roland Grader";
+			productReference = BF04E7FB1CD2FEE300757767 /* Roland Grader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF04E80E1CD2FEE300757767 /* Roland GraderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF04E81B1CD2FEE300757767 /* Build configuration list for PBXNativeTarget "Roland GraderTests" */;
+			buildPhases = (
+				BF04E80B1CD2FEE300757767 /* Sources */,
+				BF04E80C1CD2FEE300757767 /* Frameworks */,
+				BF04E80D1CD2FEE300757767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF04E8111CD2FEE300757767 /* PBXTargetDependency */,
+			);
+			name = "Roland GraderTests";
+			productName = "Roland GraderTests";
+			productReference = BF04E80F1CD2FEE300757767 /* Roland GraderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF04E7F31CD2FEE300757767 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jimmy Roland";
+				TargetAttributes = {
+					BF04E7FA1CD2FEE300757767 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					BF04E80E1CD2FEE300757767 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = BF04E7FA1CD2FEE300757767;
+					};
+				};
+			};
+			buildConfigurationList = BF04E7F61CD2FEE300757767 /* Build configuration list for PBXProject "Roland Grader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF04E7F21CD2FEE300757767;
+			productRefGroup = BF04E7FC1CD2FEE300757767 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF04E7FA1CD2FEE300757767 /* Roland Grader */,
+				BF04E80E1CD2FEE300757767 /* Roland GraderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF04E7F91CD2FEE300757767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF04E8091CD2FEE300757767 /* LaunchScreen.storyboard in Resources */,
+				BF04E8061CD2FEE300757767 /* Assets.xcassets in Resources */,
+				BF04E8041CD2FEE300757767 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF04E80D1CD2FEE300757767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF04E7F71CD2FEE300757767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF04E8011CD2FEE300757767 /* ViewController.swift in Sources */,
+				BF04E7FF1CD2FEE300757767 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF04E80B1CD2FEE300757767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF04E8141CD2FEE300757767 /* Roland_GraderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF04E8111CD2FEE300757767 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF04E7FA1CD2FEE300757767 /* Roland Grader */;
+			targetProxy = BF04E8101CD2FEE300757767 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF04E8021CD2FEE300757767 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF04E8031CD2FEE300757767 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF04E8071CD2FEE300757767 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF04E8081CD2FEE300757767 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF04E8161CD2FEE300757767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF04E8171CD2FEE300757767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF04E8191CD2FEE300757767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Roland Grader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Roland-Grader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF04E81A1CD2FEE300757767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Roland Grader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Roland-Grader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF04E81C1CD2FEE300757767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Roland GraderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Roland-GraderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roland Grader.app/Roland Grader";
+			};
+			name = Debug;
+		};
+		BF04E81D1CD2FEE300757767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Roland GraderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Roland-GraderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roland Grader.app/Roland Grader";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF04E7F61CD2FEE300757767 /* Build configuration list for PBXProject "Roland Grader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF04E8161CD2FEE300757767 /* Debug */,
+				BF04E8171CD2FEE300757767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF04E8181CD2FEE300757767 /* Build configuration list for PBXNativeTarget "Roland Grader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF04E8191CD2FEE300757767 /* Debug */,
+				BF04E81A1CD2FEE300757767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF04E81B1CD2FEE300757767 /* Build configuration list for PBXNativeTarget "Roland GraderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF04E81C1CD2FEE300757767 /* Debug */,
+				BF04E81D1CD2FEE300757767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF04E7F31CD2FEE300757767 /* Project object */;
+}
