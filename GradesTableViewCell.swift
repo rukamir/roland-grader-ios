@@ -9,6 +9,9 @@
 import UIKit
 
 class GradesTableViewCell: UITableViewCell {
+    // MARK: Properties
+    @IBOutlet var gradePts: UILabel!
+    @IBOutlet var numOfQ: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

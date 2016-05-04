@@ -13,6 +13,8 @@
 		BF04E8061CD2FEE300757767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF04E8051CD2FEE300757767 /* Assets.xcassets */; };
 		BF04E8091CD2FEE300757767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF04E8071CD2FEE300757767 /* LaunchScreen.storyboard */; };
 		BF04E8141CD2FEE300757767 /* Roland_GraderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E8131CD2FEE300757767 /* Roland_GraderTests.swift */; };
+		BF04E82D1CD4F59700757767 /* GradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E82C1CD4F59700757767 /* GradesTableViewCell.swift */; };
+		BF04E8311CD4FFDB00757767 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E8301CD4FFDB00757767 /* Grade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		BF04E80F1CD2FEE300757767 /* Roland GraderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Roland GraderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF04E8131CD2FEE300757767 /* Roland_GraderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roland_GraderTests.swift; sourceTree = "<group>"; };
 		BF04E8151CD2FEE300757767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF04E82C1CD4F59700757767 /* GradesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradesTableViewCell.swift; path = ../GradesTableViewCell.swift; sourceTree = "<group>"; };
+		BF04E8301CD4FFDB00757767 /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		BF04E7FD1CD2FEE300757767 /* Roland Grader */ = {
 			isa = PBXGroup;
 			children = (
+				BF04E82C1CD4F59700757767 /* GradesTableViewCell.swift */,
 				BF04E7FE1CD2FEE300757767 /* AppDelegate.swift */,
 				BF04E8001CD2FEE300757767 /* ViewController.swift */,
 				BF04E8021CD2FEE300757767 /* Main.storyboard */,
+				BF04E8301CD4FFDB00757767 /* Grade.swift */,
 				BF04E8051CD2FEE300757767 /* Assets.xcassets */,
 				BF04E8071CD2FEE300757767 /* LaunchScreen.storyboard */,
 				BF04E80A1CD2FEE300757767 /* Info.plist */,
@@ -197,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF04E8311CD4FFDB00757767 /* Grade.swift in Sources */,
+				BF04E82D1CD4F59700757767 /* GradesTableViewCell.swift in Sources */,
 				BF04E8011CD2FEE300757767 /* ViewController.swift in Sources */,
 				BF04E7FF1CD2FEE300757767 /* AppDelegate.swift in Sources */,
 			);
@@ -390,6 +398,7 @@
 				BF04E81A1CD2FEE300757767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF04E81B1CD2FEE300757767 /* Build configuration list for PBXNativeTarget "Roland GraderTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +407,7 @@
 				BF04E81D1CD2FEE300757767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
