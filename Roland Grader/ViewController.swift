@@ -22,8 +22,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         pointsTable.dataSource = self
         numberOfQuestions.text = String(20);
         self.calculateNewGrades(20)
-        
-        pointsTable
 
     }
 
