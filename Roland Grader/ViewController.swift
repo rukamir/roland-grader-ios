@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         pointsTable.delegate = self
         pointsTable.dataSource = self
         numberOfQuestions.text = String(30);
@@ -33,39 +32,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: Helpers
     func setQuestionCountDisplayed(numberOfQs: Int) {
-        //if let indexPath = tableView.index
-        
-        //for i in 0..<self.grades.count {
-        
-        
-        //tableView.deleteRowsAtIndexPaths(NSIndexSet(index: i), withRowAnimation: .Delete)
-        //}
-        
+        grades.removeAll()
+        self.calculateNewGrades(numberOfQs)
         pointsTable.reloadData()
     }
     
     func calculateNewGrades(numberOfQs: Int) {
-        var points = 0
+        var points: Float = 0
         var grade: Grade
+        let ptsPerQuestion: Float = (100 / Float(numberOfQs))
         
         for i in 1...numberOfQs {
-            points = 100 - ((100 / numberOfQs) * i)
-            grade = Grade(questions: i, points: points)
-            
+            points = 100 - (ptsPerQuestion * Float(i))
+            grade = Grade(questions: i, points: Int(points))
             grades += [grade]
         }
-        print(grades.count)
     }
     
     // MARK: Gesture Recognizer
     @IBAction func updateQuestionTotal(sender: UISwipeGestureRecognizer) {
-        print("Here")
         let currentVal = Int(self.numberOfQuestions.text!)
         
         switch sender.direction {
         case UISwipeGestureRecognizerDirection.Left:
+            self.setQuestionCountDisplayed(currentVal! + 1)
             self.numberOfQuestions.text = String(currentVal! + 1)
         case UISwipeGestureRecognizerDirection.Right:
+            self.setQuestionCountDisplayed(currentVal! - 1)
             self.numberOfQuestions.text = String(currentVal! - 1)
         default:
             print("not valid input")
