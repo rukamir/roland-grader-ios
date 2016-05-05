@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,41 +18,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-2g-DNb">
-                                <rect key="frame" x="70" y="70" width="460" height="471"/>
+                                <rect key="frame" x="200" y="40" width="200" height="550"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="totalQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvF-RP-4n3">
-                                        <rect key="frame" x="0.0" y="0.0" width="460" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvF-RP-4n3">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Zo-JII" userLabel="Grades Table">
-                                        <rect key="frame" x="0.0" y="0.0" width="460" height="471"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Zo-JII" userLabel="Grades Table">
+                                        <rect key="frame" x="0.0" y="20" width="200" height="530"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradesTableViewCell" rowHeight="45" id="VUQ-ZY-iIv" customClass="GradesTableViewCell" customModule="Roland_Grader" customModuleProvider="target" propertyAccessControl="none">
-                                                <rect key="frame" x="0.0" y="28" width="460" height="45"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradesTableViewCell" rowHeight="35" id="VUQ-ZY-iIv" customClass="GradesTableViewCell" customModule="Roland_Grader" customModuleProvider="target" propertyAccessControl="none">
+                                                <rect key="frame" x="0.0" y="28" width="200" height="35"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VUQ-ZY-iIv" id="hNn-Il-Jp1" userLabel="CellView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="numOfQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suR-Qq-m9P">
-                                                            <rect key="frame" x="8" y="14" width="65" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-o3-jy2">
+                                                            <rect key="frame" x="88" y="6" width="24" height="22"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="pts">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.73860452586206893" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" size="19" name="GillSans"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="pts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-o3-jy2">
-                                                            <rect key="frame" x="116" y="14" width="25" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suR-Qq-m9P">
+                                                            <rect key="frame" x="-2" y="7" width="63" height="20"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="numOfQ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <font key="NSFont" size="17" name="GillSans"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="G5g-o3-jy2" firstAttribute="leading" secondItem="suR-Qq-m9P" secondAttribute="trailing" constant="50" id="KRF-FB-xS4"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="G5g-o3-jy2" secondAttribute="trailing" constant="115" id="XMQ-Bk-7zq"/>
+                                                        <constraint firstItem="G5g-o3-jy2" firstAttribute="centerY" secondItem="hNn-Il-Jp1" secondAttribute="centerY" id="4US-mz-xlz"/>
+                                                        <constraint firstItem="suR-Qq-m9P" firstAttribute="centerX" secondItem="hNn-Il-Jp1" secondAttribute="centerX" constant="-70.5" id="Ek2-9b-U4Q"/>
+                                                        <constraint firstItem="suR-Qq-m9P" firstAttribute="centerY" secondItem="hNn-Il-Jp1" secondAttribute="centerY" id="gvo-cI-sV9"/>
+                                                        <constraint firstItem="G5g-o3-jy2" firstAttribute="centerX" secondItem="hNn-Il-Jp1" secondAttribute="centerX" id="nY5-aU-yre"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <accessibility key="accessibilityConfiguration" identifier="GradesTableViewCell" label="GradeCell">
@@ -68,17 +83,26 @@
                                     </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Fye-Zo-JII" firstAttribute="top" secondItem="IvF-RP-4n3" secondAttribute="bottom" constant="250" id="H2e-4o-dQz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fye-Zo-JII" secondAttribute="trailing" constant="1" id="ChH-K5-qog"/>
+                                    <constraint firstItem="Fye-Zo-JII" firstAttribute="leading" secondItem="XAQ-2g-DNb" secondAttribute="leading" constant="1" id="J2q-Ui-DRN"/>
+                                    <constraint firstAttribute="width" constant="200" id="KmR-Gd-XD7"/>
+                                    <constraint firstItem="Fye-Zo-JII" firstAttribute="top" secondItem="IvF-RP-4n3" secondAttribute="bottom" constant="1" id="MgY-JD-Idw"/>
+                                    <constraint firstItem="Fye-Zo-JII" firstAttribute="top" secondItem="IvF-RP-4n3" secondAttribute="bottom" constant="20" id="VZR-Fc-w9w"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="XAQ-2g-DNb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="WjY-UT-98g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XAQ-2g-DNb" secondAttribute="trailing" constant="50" id="ds7-r2-5R6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XAQ-2g-DNb" secondAttribute="bottom" constant="59" id="njy-8r-nwY"/>
-                            <constraint firstItem="XAQ-2g-DNb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="yvw-K5-f5w"/>
+                            <constraint firstItem="XAQ-2g-DNb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0VO-aJ-ca1"/>
+                            <constraint firstItem="XAQ-2g-DNb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="F0H-7c-uF2"/>
+                            <constraint firstItem="XAQ-2g-DNb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q7V-U4-rer"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XAQ-2g-DNb" secondAttribute="bottom" constant="10" id="rzA-v1-BLi"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gSj-dN-AcH" appends="YES" id="EaF-Ha-biB"/>
+                            <outletCollection property="gestureRecognizers" destination="G1C-Bf-4uF" appends="YES" id="Pti-vq-O9b"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="numberOfQuestions" destination="IvF-RP-4n3" id="iWd-m8-iVW"/>
@@ -86,6 +110,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="gSj-dN-AcH">
+                    <connections>
+                        <action selector="updateQuestionTotal:" destination="BYZ-38-t0r" id="xAt-rO-sUZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="G1C-Bf-4uF">
+                    <connections>
+                        <action selector="updateQuestionTotal:" destination="BYZ-38-t0r" id="VOH-nV-jlQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="212" y="403"/>
         </scene>

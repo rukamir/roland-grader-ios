@@ -20,8 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         pointsTable.delegate = self
         pointsTable.dataSource = self
-        numberOfQuestions.text = String(20);
-        self.calculateNewGrades(20)
+        numberOfQuestions.text = String(30);
+        self.calculateNewGrades(30)
+        self.becomeFirstResponder()
 
     }
 
@@ -52,6 +53,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             grade = Grade(questions: i, points: points)
             
             grades += [grade]
+        }
+        print(grades.count)
+    }
+    
+    // MARK: Gesture Recognizer
+    @IBAction func updateQuestionTotal(sender: UISwipeGestureRecognizer) {
+        print("Here")
+        let currentVal = Int(self.numberOfQuestions.text!)
+        
+        switch sender.direction {
+        case UISwipeGestureRecognizerDirection.Left:
+            self.numberOfQuestions.text = String(currentVal! + 1)
+        case UISwipeGestureRecognizerDirection.Right:
+            self.numberOfQuestions.text = String(currentVal! - 1)
+        default:
+            print("not valid input")
         }
     }
     
