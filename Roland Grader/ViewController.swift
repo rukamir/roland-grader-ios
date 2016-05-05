@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: Properties
@@ -19,8 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         pointsTable.delegate = self
         pointsTable.dataSource = self
-        numberOfQuestions.text = String(30);
-        self.calculateNewGrades(30)
+        self.setQuestionCountDisplayed(25)
         self.becomeFirstResponder()
 
     }
@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: Helpers
     func setQuestionCountDisplayed(numberOfQs: Int) {
+        self.numberOfQuestions.text = String(numberOfQs)
         grades.removeAll()
         self.calculateNewGrades(numberOfQs)
         pointsTable.reloadData()
@@ -44,6 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         for i in 1...numberOfQs {
             points = 100 - (ptsPerQuestion * Float(i))
+            points = roundf(points)
             grade = Grade(questions: i, points: Int(points))
             grades += [grade]
         }
@@ -56,10 +58,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         switch sender.direction {
         case UISwipeGestureRecognizerDirection.Left:
             self.setQuestionCountDisplayed(currentVal! + 1)
-            self.numberOfQuestions.text = String(currentVal! + 1)
         case UISwipeGestureRecognizerDirection.Right:
             self.setQuestionCountDisplayed(currentVal! - 1)
-            self.numberOfQuestions.text = String(currentVal! - 1)
         default:
             print("not valid input")
         }
