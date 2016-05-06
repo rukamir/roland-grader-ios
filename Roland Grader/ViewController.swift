@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         pointsTable.dataSource = self
         self.setQuestionCountDisplayed(25)
         self.becomeFirstResponder()
-
     }
 
     override func didReceiveMemoryWarning() {

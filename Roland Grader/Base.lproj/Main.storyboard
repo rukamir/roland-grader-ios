@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-2g-DNb">
-                                <rect key="frame" x="200" y="40" width="200" height="550"/>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-2g-DNb">
+                                <rect key="frame" x="200" y="10" width="200" height="580"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvF-RP-4n3">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
@@ -27,7 +27,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Zo-JII" userLabel="Grades Table">
-                                        <rect key="frame" x="0.0" y="20" width="200" height="530"/>
+                                        <rect key="frame" x="0.0" y="20" width="200" height="560"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradesTableViewCell" rowHeight="35" id="VUQ-ZY-iIv" customClass="GradesTableViewCell" customModule="Roland_Grader" customModuleProvider="target" propertyAccessControl="none">
@@ -83,11 +83,7 @@
                                     </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Fye-Zo-JII" secondAttribute="trailing" constant="1" id="ChH-K5-qog"/>
-                                    <constraint firstItem="Fye-Zo-JII" firstAttribute="leading" secondItem="XAQ-2g-DNb" secondAttribute="leading" constant="1" id="J2q-Ui-DRN"/>
                                     <constraint firstAttribute="width" constant="200" id="KmR-Gd-XD7"/>
-                                    <constraint firstItem="Fye-Zo-JII" firstAttribute="top" secondItem="IvF-RP-4n3" secondAttribute="bottom" constant="1" id="MgY-JD-Idw"/>
-                                    <constraint firstItem="Fye-Zo-JII" firstAttribute="top" secondItem="IvF-RP-4n3" secondAttribute="bottom" constant="20" id="VZR-Fc-w9w"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -95,9 +91,8 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="XAQ-2g-DNb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0VO-aJ-ca1"/>
-                            <constraint firstItem="XAQ-2g-DNb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="F0H-7c-uF2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XAQ-2g-DNb" secondAttribute="bottom" constant="10" id="HF8-0b-msb"/>
                             <constraint firstItem="XAQ-2g-DNb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q7V-U4-rer"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XAQ-2g-DNb" secondAttribute="bottom" constant="10" id="rzA-v1-BLi"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="gSj-dN-AcH" appends="YES" id="EaF-Ha-biB"/>
