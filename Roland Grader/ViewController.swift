@@ -11,6 +11,8 @@ import Foundation
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: Properties
+    let MAX_Q_TOTAL = Int(250)
+    let MIN_Q_TOTAL = Int(1)
     var grades = [Grade]()
     @IBOutlet weak var pointsTable: UITableView!
     @IBOutlet var numberOfQuestions: UILabel!
@@ -66,16 +68,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: Gesture Recognizer
     @IBAction func updateQuestionTotal(sender: UISwipeGestureRecognizer) {
         let currentVal = Int(self.numberOfQuestions.text!)
+        var updateVal: Int = 0
         
         switch sender.direction {
         case UISwipeGestureRecognizerDirection.Left:
-            self.setQuestionCountDisplayed(currentVal! + 1)
+            updateVal = currentVal! + 1
         case UISwipeGestureRecognizerDirection.Right:
-            self.setQuestionCountDisplayed(currentVal! - 1)
+            updateVal = currentVal! - 1
         default:
-            print("not valid input")
+            updateVal = 0
+        }
+        
+        if (updateVal >= MIN_Q_TOTAL && updateVal <= MAX_Q_TOTAL) {
+            self.setQuestionCountDisplayed(updateVal)
         }
     }
+    
+    // MARK: Gesture Overrides
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesMoved(touches, withEvent: event)
+    }
+
     
     // MARK: UITableViewDelegate
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
