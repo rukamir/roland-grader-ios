@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,17 +19,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mrs. Roland's Grading Tool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThY-Ih-XPA">
-                                <rect key="frame" x="198" y="225" width="205" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wA7-FV-QpE">
+                                <rect key="frame" x="-20" y="0.0" width="900" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wA7-FV-QpE" secondAttribute="height" multiplier="3:2" id="KuH-em-KW7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mrs. Roland's Grading Tool" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrr-7K-fcH">
+                                <rect key="frame" x="140" y="257" width="198" height="85"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ThY-Ih-XPA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1xa-Yk-LK4"/>
-                            <constraint firstItem="ThY-Ih-XPA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="225" id="KGG-mu-Vnj"/>
+                            <constraint firstItem="Rrr-7K-fcH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UCS-zD-lYB"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="wA7-FV-QpE" secondAttribute="bottom" id="hXq-Fb-lBf"/>
+                            <constraint firstItem="wA7-FV-QpE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="i2s-xi-NF5"/>
+                            <constraint firstItem="wA7-FV-QpE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-40" id="v8J-2Y-4mG"/>
+                            <constraint firstItem="Rrr-7K-fcH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="120" id="ygj-qa-Hqx"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,4 +47,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SplashBackground" width="960" height="640"/>
+    </resources>
 </document>
