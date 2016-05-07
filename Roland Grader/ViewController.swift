@@ -31,10 +31,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: Helpers
     func setQuestionCountDisplayed(numberOfQs: Int) {
-        self.numberOfQuestions.text = String(numberOfQs)
+        var useTableRowAnimation : UITableViewRowAnimation
+        var useViewAnimation : UIViewAnimationOptions
+        
+        if (numberOfQs > Int(self.numberOfQuestions.text!)) {
+            useTableRowAnimation = .Left
+            useViewAnimation = .TransitionFlipFromLeft
+        } else {
+            useTableRowAnimation = .Right
+            useViewAnimation = .TransitionFlipFromRight
+        }
+        
+        let range = NSMakeRange(0, self.pointsTable.numberOfSections)
+        let sections = NSIndexSet(indexesInRange: range)
+        UIView.transitionWithView(self.numberOfQuestions, duration: 0.35, options: useViewAnimation, animations: {self.numberOfQuestions.text = String(numberOfQs)}, completion: nil)
         grades.removeAll()
         self.calculateNewGrades(numberOfQs)
-        pointsTable.reloadData()
+        self.pointsTable.reloadSections(sections, withRowAnimation: useTableRowAnimation)
     }
     
     func calculateNewGrades(numberOfQs: Int) {
