@@ -42,7 +42,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suR-Qq-m9P">
-                                                            <rect key="frame" x="11" y="8" width="50" height="33"/>
+                                                            <rect key="frame" x="12" y="8" width="50" height="33"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="num">
                                                                     <attributes>
@@ -55,7 +55,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-o3-jy2">
-                                                            <rect key="frame" x="101" y="10" width="31" height="29"/>
+                                                            <rect key="frame" x="102" y="10" width="30" height="29"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="DOQ-ss-rI1"/>
+                                                            </constraints>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="pts">
                                                                     <attributes>
