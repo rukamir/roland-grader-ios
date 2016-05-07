@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF04E7FA1CD2FEE300757767"
-               BuildableName = "Roland Grader.app"
-               BlueprintName = "Roland Grader"
-               ReferencedContainer = "container:Roland Grader.xcodeproj">
+               BuildableName = "Grading Tool.app"
+               BlueprintName = "Grading Tool"
+               ReferencedContainer = "container:Grading Tool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF04E80E1CD2FEE300757767"
-               BuildableName = "Roland GraderTests.xctest"
-               BlueprintName = "Roland GraderTests"
-               ReferencedContainer = "container:Roland Grader.xcodeproj">
+               BuildableName = "Grading Tool.xctest"
+               BlueprintName = "Grading ToolTests"
+               ReferencedContainer = "container:Grading Tool.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF04E7FA1CD2FEE300757767"
-            BuildableName = "Roland Grader.app"
-            BlueprintName = "Roland Grader"
-            ReferencedContainer = "container:Roland Grader.xcodeproj">
+            BuildableName = "Grading Tool.app"
+            BlueprintName = "Grading Tool"
+            ReferencedContainer = "container:Grading Tool.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF04E7FA1CD2FEE300757767"
-            BuildableName = "Roland Grader.app"
-            BlueprintName = "Roland Grader"
-            ReferencedContainer = "container:Roland Grader.xcodeproj">
+            BuildableName = "Grading Tool.app"
+            BlueprintName = "Grading Tool"
+            ReferencedContainer = "container:Grading Tool.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF04E7FA1CD2FEE300757767"
-            BuildableName = "Roland Grader.app"
-            BlueprintName = "Roland Grader"
-            ReferencedContainer = "container:Roland Grader.xcodeproj">
+            BuildableName = "Grading Tool.app"
+            BlueprintName = "Grading Tool"
+            ReferencedContainer = "container:Grading Tool.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

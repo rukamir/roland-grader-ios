@@ -11,6 +11,8 @@ import Foundation
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: Properties
+    let MAX_Q_TOTAL = Int(250)
+    let MIN_Q_TOTAL = Int(1)
     var grades = [Grade]()
     @IBOutlet weak var pointsTable: UITableView!
     @IBOutlet var numberOfQuestions: UILabel!
@@ -31,10 +33,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: Helpers
     func setQuestionCountDisplayed(numberOfQs: Int) {
-        self.numberOfQuestions.text = String(numberOfQs)
+        var useTableRowAnimation : UITableViewRowAnimation
+        var useViewAnimation : UIViewAnimationOptions
+        
+        if (numberOfQs > Int(self.numberOfQuestions.text!)) {
+            useTableRowAnimation = .Left
+            useViewAnimation = .TransitionFlipFromLeft
+        } else {
+            useTableRowAnimation = .Right
+            useViewAnimation = .TransitionFlipFromRight
+        }
+        
+        let range = NSMakeRange(0, self.pointsTable.numberOfSections)
+        let sections = NSIndexSet(indexesInRange: range)
+        UIView.transitionWithView(self.numberOfQuestions, duration: 0.35, options: useViewAnimation, animations: {self.numberOfQuestions.text = String(numberOfQs)}, completion: nil)
         grades.removeAll()
         self.calculateNewGrades(numberOfQs)
-        pointsTable.reloadData()
+        self.pointsTable.reloadSections(sections, withRowAnimation: useTableRowAnimation)
     }
     
     func calculateNewGrades(numberOfQs: Int) {
@@ -53,16 +68,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: Gesture Recognizer
     @IBAction func updateQuestionTotal(sender: UISwipeGestureRecognizer) {
         let currentVal = Int(self.numberOfQuestions.text!)
+        var updateVal: Int = 0
         
         switch sender.direction {
         case UISwipeGestureRecognizerDirection.Left:
-            self.setQuestionCountDisplayed(currentVal! + 1)
+            updateVal = currentVal! + 1
         case UISwipeGestureRecognizerDirection.Right:
-            self.setQuestionCountDisplayed(currentVal! - 1)
+            updateVal = currentVal! - 1
         default:
-            print("not valid input")
+            updateVal = 0
+        }
+        
+        if (updateVal >= MIN_Q_TOTAL && updateVal <= MAX_Q_TOTAL) {
+            self.setQuestionCountDisplayed(updateVal)
         }
     }
+    
+    // MARK: Gesture Overrides
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesMoved(touches, withEvent: event)
+    }
+
     
     // MARK: UITableViewDelegate
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

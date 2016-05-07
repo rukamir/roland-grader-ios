@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roland_Grader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Grading_Tool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,46 +18,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GraderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-ru-pW3">
+                                <rect key="frame" x="-180" y="-120" width="960" height="720"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZj-NS-iI4">
+                                <rect key="frame" x="230" y="20" width="140" height="570"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="N3K-AM-QmK">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="570"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="pmn-f0-wuT"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-2g-DNb">
-                                <rect key="frame" x="200" y="10" width="200" height="580"/>
+                                <rect key="frame" x="230" y="10" width="140" height="580"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvF-RP-4n3">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GLS-Q7-h8f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong  |  Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0x-fv-14L">
+                                        <rect key="frame" x="0.0" y="50" width="140" height="20"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Zo-JII" userLabel="Grades Table">
-                                        <rect key="frame" x="0.0" y="20" width="200" height="560"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="70" width="140" height="510"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradesTableViewCell" rowHeight="35" id="VUQ-ZY-iIv" customClass="GradesTableViewCell" customModule="Roland_Grader" customModuleProvider="target" propertyAccessControl="none">
-                                                <rect key="frame" x="0.0" y="28" width="200" height="35"/>
+                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="GradesTableViewCell" rowHeight="50" id="VUQ-ZY-iIv" customClass="GradesTableViewCell" customModule="Grading_Tool" customModuleProvider="target" propertyAccessControl="none">
+                                                <rect key="frame" x="0.0" y="28" width="140" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VUQ-ZY-iIv" id="hNn-Il-Jp1" userLabel="CellView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="49"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-o3-jy2">
-                                                            <rect key="frame" x="88" y="6" width="24" height="22"/>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suR-Qq-m9P">
+                                                            <rect key="frame" x="18" y="8" width="50" height="33"/>
                                                             <attributedString key="attributedText">
-                                                                <fragment content="pts">
+                                                                <fragment content="num">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.73860452586206893" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="19" name="GillSans"/>
+                                                                        <color key="NSColor" red="0.30992096662521362" green="0.79934316873550415" blue="0.34436827898025513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="28" name="GillSans"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suR-Qq-m9P">
-                                                            <rect key="frame" x="-2" y="7" width="63" height="20"/>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-o3-jy2">
+                                                            <rect key="frame" x="92" y="10" width="30" height="29"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="DOQ-ss-rI1"/>
+                                                            </constraints>
                                                             <attributedString key="attributedText">
-                                                                <fragment content="numOfQ">
+                                                                <fragment content="pts">
                                                                     <attributes>
-                                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                        <font key="NSFont" size="17" name="GillSans"/>
+                                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <font key="NSFont" size="25" name="GillSans"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -64,13 +91,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="G5g-o3-jy2" firstAttribute="centerY" secondItem="hNn-Il-Jp1" secondAttribute="centerY" id="4US-mz-xlz"/>
-                                                        <constraint firstItem="suR-Qq-m9P" firstAttribute="centerX" secondItem="hNn-Il-Jp1" secondAttribute="centerX" constant="-70.5" id="Ek2-9b-U4Q"/>
+                                                        <constraint firstItem="suR-Qq-m9P" firstAttribute="leading" secondItem="hNn-Il-Jp1" secondAttribute="leadingMargin" constant="10" id="H5M-NZ-Nfj"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="G5g-o3-jy2" secondAttribute="trailing" constant="10" id="Sxe-Tn-Ews"/>
                                                         <constraint firstItem="suR-Qq-m9P" firstAttribute="centerY" secondItem="hNn-Il-Jp1" secondAttribute="centerY" id="gvo-cI-sV9"/>
-                                                        <constraint firstItem="G5g-o3-jy2" firstAttribute="centerX" secondItem="hNn-Il-Jp1" secondAttribute="centerX" id="nY5-aU-yre"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="GradesTableViewCell" label="GradeCell">
                                                     <accessibilityTraits key="traits" none="YES"/>
                                                 </accessibility>
@@ -83,7 +113,7 @@
                                     </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="KmR-Gd-XD7"/>
+                                    <constraint firstAttribute="width" constant="140" id="KmR-Gd-XD7"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -92,6 +122,11 @@
                         <constraints>
                             <constraint firstItem="XAQ-2g-DNb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0VO-aJ-ca1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XAQ-2g-DNb" secondAttribute="bottom" constant="10" id="HF8-0b-msb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0gT-ru-pW3" secondAttribute="bottom" id="JFG-2w-n0e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jZj-NS-iI4" secondAttribute="bottom" constant="10" id="RtX-B9-LrL"/>
+                            <constraint firstItem="jZj-NS-iI4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="ddy-ZR-SQm"/>
+                            <constraint firstItem="jZj-NS-iI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iGs-Do-bLf"/>
+                            <constraint firstItem="0gT-ru-pW3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q3X-Zl-m6o"/>
                             <constraint firstItem="XAQ-2g-DNb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q7V-U4-rer"/>
                         </constraints>
                         <connections>
@@ -119,4 +154,7 @@
             <point key="canvasLocation" x="212" y="403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GraderBackground" width="960" height="720"/>
+    </resources>
 </document>
