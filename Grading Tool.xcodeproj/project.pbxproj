@@ -336,9 +336,10 @@
 		BF04E8191CD2FEE300757767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Roland Grader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Roland-Grader";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.jimmyroland.Roland-Grader";
 				PRODUCT_NAME = "Grading Tool";
 			};
 			name = Debug;
@@ -346,9 +347,10 @@
 		BF04E81A1CD2FEE300757767 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Roland Grader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Roland-Grader";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.jimmyroland.Roland-Grader";
 				PRODUCT_NAME = "Grading Tool";
 			};
 			name = Release;
